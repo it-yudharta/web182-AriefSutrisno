@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/crud','CrudController@index');
+Route::post('/crud/create','CrudController@create');
+Route::get('/crud/{id}/edit','CrudController@edit');
+Route::post('/crud/{id}/update','CrudController@update');
+Route::get('/crud/{id}/delete','CrudController@delete');
